@@ -1,0 +1,12 @@
+# Minimal runtime dependencies for the deployed Streamlit app (Docker image)
+interpret-core==0.7.8
+scikit-learn==1.9.1
+xgboost-cpu==3.4.1   # CPU-only build: same "xgboost" module, ~350 MB smaller (no CUDA libs)
+lightgbm==4.7.0
+lime==0.2.0.1
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+joblib>=1.3
+streamlit>=1.40

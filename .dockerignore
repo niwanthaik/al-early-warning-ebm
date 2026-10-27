@@ -1,0 +1,13 @@
+# keep real data, training artefacts and dev files out of the image
+data/*.zip
+data/processed/
+data/holdout_candidate.csv
+models/knn.pkl
+results/test_predictions.parquet
+report/
+*.ipynb
+*_quick/
+*.log
+.venv/
+__pycache__/
+.git/

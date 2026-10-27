@@ -1,0 +1,13 @@
+# Real (row-level) student data is never published (re-identification risk; see report §1.5).
+# Download the source file from Kaggle into data/ and run 01_preprocess.py to recreate these.
+data/*.zip
+data/processed/
+data/holdout_candidate.csv
+# k-NN stores its training rows inside the pickle
+models/knn.pkl
+# data/sample_upload.csv and data/lime_background.csv ARE committed: real, minimised samples used by the app
+.venv/
+__pycache__/
+*_quick/
+*.log
+catboost_info/

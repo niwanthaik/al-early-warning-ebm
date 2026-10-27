@@ -1,0 +1,240 @@
+{
+ "raw_rows": 337553,
+ "raw_cols": 19,
+ "quality": {
+  "stream": {
+   "NaN": 0,
+   "Absent": 0,
+   "Withheld": 0,
+   "Invalid nic error": 0,
+   "Invalid day error": 0,
+   "Major error": 0,
+   "-": 150514
+  },
+  "Zscore": {
+   "NaN": 0,
+   "Absent": 0,
+   "Withheld": 0,
+   "Invalid nic error": 0,
+   "Invalid day error": 0,
+   "Major error": 0,
+   "-": 105249
+  },
+  "sub1_r": {
+   "NaN": 0,
+   "Absent": 43581,
+   "Withheld": 16,
+   "Invalid nic error": 0,
+   "Invalid day error": 0,
+   "Major error": 0,
+   "-": 0
+  },
+  "sub2_r": {
+   "NaN": 0,
+   "Absent": 45556,
+   "Withheld": 16,
+   "Invalid nic error": 0,
+   "Invalid day error": 0,
+   "Major error": 0,
+   "-": 0
+  },
+  "sub3_r": {
+   "NaN": 0,
+   "Absent": 43332,
+   "Withheld": 65,
+   "Invalid nic error": 0,
+   "Invalid day error": 0,
+   "Major error": 0,
+   "-": 0
+  },
+  "cgt_r": {
+   "NaN": 0,
+   "Absent": 76628,
+   "Withheld": 16,
+   "Invalid nic error": 0,
+   "Invalid day error": 0,
+   "Major error": 0,
+   "-": 0
+  },
+  "ge_r": {
+   "NaN": 0,
+   "Absent": 66140,
+   "Withheld": 16,
+   "Invalid nic error": 0,
+   "Invalid day error": 0,
+   "Major error": 0,
+   "-": 0
+  },
+  "birth_year": {
+   "NaN": 0,
+   "Absent": 0,
+   "Withheld": 0,
+   "Invalid nic error": 1484,
+   "Invalid day error": 75,
+   "Major error": 24,
+   "-": 0
+  },
+  "birth_month": {
+   "NaN": 0,
+   "Absent": 0,
+   "Withheld": 0,
+   "Invalid nic error": 1484,
+   "Invalid day error": 75,
+   "Major error": 24,
+   "-": 0
+  },
+  "gender": {
+   "NaN": 1484,
+   "Absent": 0,
+   "Withheld": 0,
+   "Invalid nic error": 0,
+   "Invalid day error": 0,
+   "Major error": 24,
+   "-": 0
+  }
+ },
+ "sat_all_three": 290285,
+ "absent_or_withheld_removed": 47268,
+ "eligible_n": 187038,
+ "eligible_rate": 0.6443254043440068,
+ "validation": {
+  "official_sat": 301771,
+  "official_qualified": 194297,
+  "official_rate": 0.6439,
+  "coverage_sat": 0.9619380258540416,
+  "coverage_qualified": 0.9626396701956283
+ },
+ "leakage": {
+  "stream_blank_vs_eligible": {
+   "0": {
+    "false": 1,
+    "true": 103246
+   },
+   "1": {
+    "false": 187038,
+    "true": 0
+   }
+  },
+  "zscore_blank_vs_eligible": {
+   "0": {
+    "false": 45266,
+    "true": 57981
+   },
+   "1": {
+    "false": 187038,
+    "true": 0
+   }
+  }
+ },
+ "derived_stream_agreement": {
+  "overall": 0.9840140291596939,
+  "standard_streams": 0.9986435086462759
+ },
+ "k_anonymity": {
+  "public_file: birth_year+month+day+gender+combo": {
+   "unique_records_pct": 0.24605129441755516,
+   "k_lt_5_pct": 0.42406255920905317,
+   "median_k": 7.0,
+   "groups": 102153
+  },
+  "used_in_model: birth_year+month+gender+combo": {
+   "unique_records_pct": 0.059772292746783334,
+   "k_lt_5_pct": 0.13003427665914533,
+   "median_k": 185.0,
+   "groups": 30492
+  },
+  "used_in_model_coarse: age+gender+stream": {
+   "unique_records_pct": 0.00023080765454639406,
+   "k_lt_5_pct": 0.0008164390168282895,
+   "median_k": 16539.0,
+   "groups": 314
+  }
+ },
+ "implausible_age_set_missing": 32,
+ "missingness": {
+  "CGT score": {
+   "missing_pct": 0.11431179702705961,
+   "pass_if_missing": 0.7125937980291113,
+   "pass_if_present": 0.6355143094958421
+  },
+  "General English": {
+   "missing_pct": 0.07670392889746284,
+   "pass_if_missing": 0.6622653372855475,
+   "pass_if_present": 0.6428350228901683
+  },
+  "age (NIC error)": {
+   "missing_pct": 0.002370084572058494,
+   "pass_if_missing": 0.4694767441860465,
+   "pass_if_present": 0.6447407949667987
+  },
+  "gender": {
+   "missing_pct": 0.0021220524656802796,
+   "pass_if_missing": 0.46915584415584416,
+   "pass_if_present": 0.6446979138257805
+  }
+ },
+ "cardinality": {
+  "subjects": 61,
+  "combinations": 2662,
+  "top20_share": 0.7171986151540727,
+  "combos_lt_30": 2242
+ },
+ "cohort_effect": {
+  "18": {
+   "jan": 0.6416115453998797,
+   "feb_dec": 0.581570996978852
+  },
+  "19": {
+   "jan": 0.7128448531592999,
+   "feb_dec": 0.6214109135112706
+  },
+  "20": {
+   "jan": 0.6842105263157895,
+   "feb_dec": 0.7009994121105232
+  }
+ },
+ "pass_by_gender": {
+  "female": 0.7167203944249549,
+  "male": 0.5441832000463127
+ },
+ "pass_by_stream": {
+  "ARTS": 0.6722385500857213,
+  "BIOLOGICAL SCIENCE": 0.5655379096119351,
+  "BIOSYSTEMS TECHNOLOGY": 0.6915567282321899,
+  "COMMERCE": 0.6899502044867297,
+  "ENGINEERING TECHNOLOGY": 0.6144955925563174,
+  "PHYSICAL SCIENCE": 0.5897596081763207
+ },
+ "features": {
+  "numeric": [
+   "cgt_score",
+   "ge_grade",
+   "age_at_exam",
+   "birth_month"
+  ],
+  "categorical": [
+   "gender",
+   "syllabus",
+   "stream"
+  ],
+  "flags": [
+   "cgt_absent",
+   "ge_absent"
+  ],
+  "subject_indicators": 43
+ },
+ "split": {
+  "train": {
+   "rows": 203198,
+   "eligible_rate": 0.6443222866366795
+  },
+  "val": {
+   "rows": 29028,
+   "eligible_rate": 0.6443433925864682
+  },
+  "test": {
+   "rows": 58058,
+   "eligible_rate": 0.644321196045334
+  }
+ }
+}
