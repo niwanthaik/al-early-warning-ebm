@@ -18,7 +18,7 @@ Applied Machine Learning assignment (MSc in Artificial Intelligence, University 
 | Executed walkthrough | `walkthrough.ipynb` |
 | Front end (bonus) | `app.py` (Streamlit) |
 | Demo video script | `DEMO_SCRIPT.md` |
-| Deployment (Docker → GHCR → Azure Container Apps) | `Dockerfile`, `deploy/docker-publish.yml` (moved to `.github/workflows/` when pushing), `DEPLOY_AZURE.md` |
+| Deployment (Docker → GHCR → Azure Container Apps) | `Dockerfile`, `.github/workflows/docker-publish.yml`, `DEPLOY_AZURE.md` |
 
 ## Dataset
 The raw data is **not included in this repository**. It is public but contains quasi-identifiers (birth date, gender and subjects
@@ -43,5 +43,7 @@ macOS: if XGBoost or LightGBM can't find `libomp.dylib`, copy the copy bundled w
 `cp .venv/lib/python3.12/site-packages/sklearn/.dylibs/libomp.dylib "$(python -c 'import sys;print(sys.base_prefix)')/lib/"`
 
 ## Deploy (Azure)
-See `DEPLOY_AZURE.md`: push to GitHub, and Actions builds `ghcr.io/<you>/<repo>:latest`. Then one `az containerapp up` command in Azure Cloud Shell.
+**Live app:** https://al-early-warning.redwave-d9ae0d05.eastasia.azurecontainerapps.io
+
+Every push to `main` builds `ghcr.io/niwanthaik/al-early-warning-ebm:latest` with GitHub Actions. See `DEPLOY_AZURE.md` for the Azure Container Apps setup and updates.
 The image contains the models plus two minimised real samples: 500 test candidates (sample class) and 5,000 training candidates (LIME background).

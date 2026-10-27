@@ -180,7 +180,7 @@ a(f"""<div class='title'>
 <h1>Early Identification of At-Risk GCE A/L Candidates in Sri Lanka<br>with an Explainable Boosting Machine</h1>
 <div class='sub'>Applied Machine Learning: Assignment Report</div>
 <div class='meta'><b>Nimantha Herath</b><br>Index number: [add]<br>MSc in Artificial Intelligence, University of Moratuwa<br>
-Source code: [GitHub link]<br>Demo video: [link]</div></div>
+Source code: <a href='https://github.com/niwanthaik/al-early-warning-ebm'>https://github.com/niwanthaik/al-early-warning-ebm</a><br>Live app: <a href='https://al-early-warning.redwave-d9ae0d05.eastasia.azurecontainerapps.io'>https://al-early-warning.redwave-d9ae0d05.eastasia.azurecontainerapps.io</a><br>Demo video: [link]</div></div>
 <div class='abstract'><b>Abstract.</b> About {pc(1 - S['eligible_rate'], 0)} of Sri Lankan GCE Advanced Level (A/L) candidates fail to meet the basic
 university-entry requirement of passing all three subjects. Using the full national 2020 results
 ({num(S['sat_all_three'])} candidates, validated against official statistics), this work predicts, <i>before results are released</i>,
@@ -422,7 +422,7 @@ and an explanation chart. The chart shows the EBM's exact contributions, SHAP fo
 <li><b>What the model learned:</b> the shape functions, interactions, PDPs, method agreement and the domain-alignment table.</li>
 <li><b>Ethics and model card:</b> intended use, data minimisation, limitations and fairness results. The sidebar switches between the EBM and the gender-free EBM and adjusts the flagging threshold.</li></ol>
 <p><b>Deployment.</b> The app is packaged as a Docker image (<code>Dockerfile</code>). A GitHub Actions workflow builds and publishes it to the GitHub Container Registry on every push,
-and it is hosted on <b>Azure Container Apps</b>, following the pattern of the course MLOps workshop: [add the app URL]. The deployed app works on the <b>real 2020 data</b>. Its sample class is 500 held-out test candidates
+and it is hosted on <b>Azure Container Apps</b>, following the pattern of the course MLOps workshop, at <a href='https://al-early-warning.redwave-d9ae0d05.eastasia.azurecontainerapps.io'>https://al-early-warning.redwave-d9ae0d05.eastasia.azurecontainerapps.io</a> (East Asia region; it scales to zero when idle, so the first load takes up to a minute). The deployed app works on the <b>real 2020 data</b>. Its sample class is 500 held-out test candidates
 with their actual results, so the app scores itself live, and LIME uses 5,000 real training candidates as background. Both files are minimised as described in §1.5.</p>
 {"".join(img(s, c, w) for s, c, w in zip(shots, ["Check-a-student tab with the EBM's exact explanation.", "Check-a-class tab: ranked risk list for an uploaded CSV, scored against actual results.", "Ethics and model-card tab with the fairness comparison."], ["78%", "70%", "70%"]))}
 <h2>7. Conclusion</h2>

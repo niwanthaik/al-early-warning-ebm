@@ -1,6 +1,8 @@
 # Deploying the app on Azure Container Apps
 
 The same pattern as the course MLOps workshop (Sections 5–6): **Docker image → GitHub Container Registry → Azure Container Apps**.
+
+**Live app:** https://al-early-warning.redwave-d9ae0d05.eastasia.azurecontainerapps.io (resource group `rg-al-early-warning`, East Asia)
 GitHub builds the image for you, so you don't need Docker on your Mac. Total time is about 20 minutes.
 
 The image contains the trained models, the results/figures and two minimised real samples from the public 2020 dataset:
@@ -39,7 +41,7 @@ The image contains the trained models, the results/figures and two minimised rea
    IMAGE=ghcr.io/<your-username>/al-early-warning-ebm:latest
    RG=rg-al-early-warning
    APP=al-early-warning
-   LOC=southeastasia        # if your subscription blocks this region, try australiaeast, eastasia or centralindia
+   LOC=eastasia             # Azure for Students only allows malaysiawest, eastasia, japaneast, indonesiacentral, koreacentral
 
    az extension add --name containerapp --upgrade -y
    az provider register --namespace Microsoft.App --wait
